@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .map {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-lg-5 my-3 p-4 overflow-hidden">
+        <!-- header -->
+        <div class="shadow p-3 d-flex text-center flex-column justify-content-center align-items-center col-12">
+            <h2 class="text-primary fw-bold">BusKu</h2>
+            <h1 id="jam"></h1>
+            <h5 class="col-9 col-lg-12">Lokasi Anda Saat Ini : Jl. Arifin Ahmad</h5>
+            <form onsubmit="return search(event)" class="d-flex my-3 col-lg-8 col-12">
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Cari Lokasi Anda">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- header end -->
+
+        <!-- content -->
+        <div class="col-12 my-5">
+            <div class="col-12 overflow-hidden card shadow d-flex flex-column flex-lg-row gap-3 align-items-center flex-row"
+                data-title="panam">
+                <iframe class="map col-lg-4 col-12"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.687201367069!2d101.40784307357656!3d0.4645099637847087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a96d60a48f77%3A0x909b68ee85813c01!2sRIAU%20GARDEN!5e0!3m2!1sid!2sid!4v1725974011779!5m2!1sid!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="my-4 my-lg-0 col-12 px-3 d-flex flex-row gap-3">
+                    <div>
+                        <h1 class="mb-3">Bus 1</h1>
+                        <h5>Panam menuju SKA</h5>
+                        <h5>Perkiraan Tiba Dalam 5 Menit</h5>
+                        <h5>Jumlah Penumpang : 10 Orang</h5>
+                    </div>
+                    <div class="col-6 d-none d-lg-block">
+                        <img src="bus2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 card overflow-hidden shadow d-flex flex-column flex-lg-row gap-3 align-items-center my-5 flex-row"
+                data-title="man 1">
+                <iframe class="map col-lg-4 col-12"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.663642291243!2d101.42269957094815!3d0.5008052314954606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aeb6c17dc257%3A0x67b8c18754ae1012!2sMAN%201%20Pekanbaru!5e0!3m2!1sid!2sid!4v1726026265258!5m2!1sid!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="my-4 my-lg-0 col-12 px-3 d-flex flex-row gap-3">
+                    <div>
+                        <h4 class="mb-3">Bus 2</h4>
+                        <h5>MAN 1 menuju Nangka</h5>
+                        <h5>Perkiraan Tiba Dalam 5 Menit</h5>
+                        <h5>Jumlah Penumpang : 10 Orang</h5>
+                    </div>
+                    <div class="col-6 d-none d-lg-block">
+                        <img src="bus2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 card overflow-hidden shadow d-flex flex-column flex-lg-row gap-3 align-items-center flex-row"
+            data-title="Sudirman">
+            <iframe class="map col-lg-4 col-12"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63834.56649451674!2d101.38423822209373!3d0.5097689970267375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5af1cb61d0ffd%3A0xa95f5a3de3bf610f!2sSudirman%20city%20square!5e0!3m2!1sid!2sid!4v1725974749953!5m2!1sid!2sid"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="my-4 my-lg-0 col-12 px-3 d-flex flex-row gap-3">
+                <div>
+                    <h4 class="mb-3">Bus 3</h4>
+                    <h5>Sudirman menuju Halte Wali Kota</h5>
+                    <h5>Perkiraan Tiba Dalam 5 Menit</h5>
+                    <h5>Jumlah Penumpang : 10 Orang</h5>
+                </div>
+                <div class="col-6 d-none d-lg-block">
+                    <img src="bus2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        // Calling showTime function at every second
+        setInterval(showTime, 1000);
+
+        // Defining showTime funcion
+        function showTime() {
+            // Getting current time and date
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+
+            // Setting time for 12 Hrs format
+            if (hour >= 12) {
+                if (hour > 12) hour -= 12;
+                am_pm = " PM";
+            } else if (hour == 0) {
+                hr = 12;
+                am_pm = " AM";
+            }
+
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+
+            let currentTime = hour + ":" + min + ":" + sec + am_pm;
+
+            // Displaying the time
+            document.getElementById("jam").innerHTML = currentTime;
+        }
+
+        showTime();
+
+        function search(event) {
+            event.preventDefault();
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.classList.remove('d-flex')
+                    card.style.display = 'none';
+                }
+            });
+
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>
